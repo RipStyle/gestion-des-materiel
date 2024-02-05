@@ -18,6 +18,10 @@ const Card = (props: Props) => {
       <div className="footer">
         <p>{mat.qte}</p>
       </div>
+      <div className="buttons">
+        <button className="button editbtn">Edit</button>
+        <button className="button deletebtn">Delete</button>
+      </div>
     </div>
   );
 };
