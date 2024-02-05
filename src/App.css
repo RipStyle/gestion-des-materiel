@@ -103,9 +103,11 @@ textarea {
 }
 
 .card{
- width: 25%;
+ width: 22%;
  background-color: #f4f4f4;
  height: max-content;
+ border-radius: 50px;
+ margin: 1%;
 }
 .hr-text {
   border: 0;
@@ -142,5 +144,4 @@ textarea {
   justify-content: center;
   align-items: center;
   margin: 20px;
-
 }
