@@ -16,19 +16,19 @@ function Home() {
   const getMateriels = async () => {
     const data = await getDocs(materielRef);
     setMateriels(
-      data.docs.map((doc) => ({ ...doc.data(), id: doc.id })) as Mat[]
+      data.docs.map((doc) => ({ ...doc.data()})) as Mat[]
     );
 
   };
   useEffect(() => {
     getMateriels();
-  }, []);
+  }, [materiels]);
 
   return (
     <div className="HomeContainer">
       {materiels?.map((mat) => (
-        console.log(mat),
-        <Card materielRef={materielRef} key={mat.id} mat={mat}  />
+        
+        <Card  mat={mat}  />
 
       ))}
     </div>

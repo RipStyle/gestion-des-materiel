@@ -6,8 +6,11 @@ import { auth, db } from "../../config/firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
+import { v4 as uuidv4 } from 'uuid';
 
 const CreateForm = () => {
+  const uuid = uuidv4();
+
   const [user] = useAuthState(auth);
 
   const [image, setImage] = useState("");
@@ -40,7 +43,7 @@ const CreateForm = () => {
       name: data.nom,
       qte: data.qte,
       img: image,
-      id: user?.uid,
+      id: uuid ,
     });
     alert("materiel has been submitted succesfully");
     navigate("/");
