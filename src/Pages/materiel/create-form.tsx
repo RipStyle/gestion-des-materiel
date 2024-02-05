@@ -15,7 +15,6 @@ const CreateForm = () => {
   const schema = yup.object().shape({
     nom: yup.string().required("Obligatoire !"),
     qte: yup.number().integer("has to be an integer").required("Obligatoire !"),
-    img: yup.string(),
   });
 
   interface createFormData {

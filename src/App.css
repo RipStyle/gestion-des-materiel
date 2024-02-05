@@ -103,9 +103,9 @@ textarea {
 }
 
 .card{
- background-color: antiquewhite;
-margin:auto;
-padding :auto;
+ width: 25%;
+ background-color: #f4f4f4;
+ height: max-content;
 }
 .hr-text {
   border: 0;
@@ -134,4 +134,13 @@ padding :auto;
     line-height: 1.5em;
     color: rgba(2, 0, 0, 0.567);
     background-color: #ffffff;
+}
+
+.HomeContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+
 }

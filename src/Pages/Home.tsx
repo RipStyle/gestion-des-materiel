@@ -25,10 +25,11 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="HomeContainer">
       {materiels?.map((mat) => (
+        console.log(mat),
+        <Card key={mat.id} mat={mat} />
 
-        <Card mat={mat} />
       ))}
     </div>
   );
