@@ -7,6 +7,10 @@ interface Props {
 const Card = (props: Props) => {
   const { mat } = props;
 
+const Edit = () =>{
+  
+}
+
   return (
     <div className="card">
       <div className="header">
@@ -19,7 +23,7 @@ const Card = (props: Props) => {
         <p>{mat.qte}</p>
       </div>
       <div className="buttons">
-        <button className="button editbtn">Edit</button>
+        <button onClick={Edit} className="button editbtn">Edit</button>
         <button className="button deletebtn">Delete</button>
       </div>
     </div>
