@@ -36,20 +36,29 @@ const CreateForm = () => {
 
   const navigate = useNavigate();
   const onCreateMat = async (data: createFormData) => {
-    
+
     await addDoc(materielRef, {
       name: data.nom,
       qte: data.qte,
-      img: data.img,
+      img: image,
       id: user?.uid,
     });
     alert("materiel has been submitted succesfully");
     navigate("/");
   };
 
-  const handleChange = (event) => {
-    setImage(URL.createObjectURL(event.target.files[0]));
+ const handleChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      // Use URL.createObjectURL to display a preview of the image
+      console.log(URL.createObjectURL(file))
+      setImage(URL.createObjectURL(file));
+      // Update the form value using setValue from react-hook-form
+      console.log(image);
+    }
+    
   };
+  
 
   return (
     <form onSubmit={handleSubmit(onCreateMat)} className="create-post">

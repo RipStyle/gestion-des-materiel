@@ -18,6 +18,7 @@ function Home() {
     setMateriels(
       data.docs.map((doc) => ({ ...doc.data(), id: doc.id })) as Mat[]
     );
+
   };
   useEffect(() => {
     getMateriels();
@@ -26,6 +27,7 @@ function Home() {
   return (
     <div>
       {materiels?.map((mat) => (
+
         <Card mat={mat} />
       ))}
     </div>

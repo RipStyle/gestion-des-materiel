@@ -6,6 +6,7 @@ interface Props {
 
 const Card = (props: Props) => {
   const { mat } = props;
+
   return (
     <div className="card">
       <div className="header">
