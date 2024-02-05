@@ -28,7 +28,7 @@ function Home() {
     <div className="HomeContainer">
       {materiels?.map((mat) => (
         console.log(mat),
-        <Card key={mat.id} mat={mat} />
+        <Card materielRef={materielRef} key={mat.id} mat={mat}  />
 
       ))}
     </div>
