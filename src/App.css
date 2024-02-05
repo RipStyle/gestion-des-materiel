@@ -1,0 +1,137 @@
+.App {
+  text-align: center;
+}
+
+.body img{
+  height: 100px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: slateblue;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar .links {
+  text-align: center;
+  margin-right: 50px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 3px solid white;
+  padding-bottom: 2px;
+  margin: 10px;
+}
+
+.links a:hover{
+  color:antiquewhite;
+  border-bottom: 3px solid antiquewhite;
+  transition: 200ms;
+}
+
+
+.navbar .user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+
+.user p {
+  font-size: 15px;
+  margin-right: 10px;
+  color: white;
+}
+.user img {
+  font-size: 15px;
+  border-radius: 50%;
+}
+
+input,
+textarea {
+  font-family: "Nunito", sans-serif;
+}
+
+.create-post {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+form {
+  margin-top: 50px;
+  padding: 30px 20px;
+  width: 320px;
+  border-radius: 7px;
+  background-color: white;
+  backdrop-filter: blur(5px);
+  background-color: rgba(43, 0, 255, 0.588);
+  overflow: hidden;
+}
+
+input,
+textarea {
+  padding: 8px 10px;
+  margin: 3px 8px 16px 8px;
+  background-color: rgba(222, 239, 248, 0.877);
+  border: 0px transparent;
+  border-radius: 5px;
+  color: rgb(97, 4, 184);
+  font-size: 16px;
+  z-index: 1;
+}
+.err{
+  color:red;
+  font-size: 20px;
+  margin: 4px;
+}
+
+.submitForm:hover {
+  cursor: pointer;
+}
+
+.card{
+ background-color: antiquewhite;
+margin:auto;
+padding :auto;
+}
+.hr-text {
+  border: 0;
+  line-height: 1em;
+  position: relative;
+  text-align: center;
+  height: 1.5em;
+  font-size: 14px;
+  margin: 30px 15px;
+}
+
+.hr-text::before {
+    content: "";
+    background: linear-gradient(to right, transparent, rgba(28, 3, 3, 0.565), transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+}
+
+.hr-text::after {
+    content: attr(data-content);
+    position: relative;
+    padding: 0 7px;
+    line-height: 1.5em;
+    color: rgba(2, 0, 0, 0.567);
+    background-color: #ffffff;
+}
