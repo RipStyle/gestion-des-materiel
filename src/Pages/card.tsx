@@ -1,4 +1,5 @@
 import { Mat } from "./Home";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   mat: Mat;
@@ -8,7 +9,8 @@ const Card = (props: Props) => {
   const { mat } = props;
 
 const Edit = () =>{
-  
+  const navigate=useNavigate();
+  navigate("/edit")
 }
 
   return (
