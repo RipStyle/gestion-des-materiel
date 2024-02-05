@@ -7,10 +7,10 @@ interface Props {
 
 const Card = (props: Props) => {
   const { mat } = props;
-
+  const navigate = useNavigate()
 const Edit = () =>{
-  const navigate=useNavigate();
-  navigate("/edit")
+  
+  navigate("/edit?id="+mat.id)
 }
 
   return (

@@ -7,6 +7,7 @@ import Login from "./Pages/login";
 import Navbar from "./Pages/components/navbar";
 import Create from "./Pages/materiel/create"
 import SignUp from "./Pages/components/signup";
+import EditCard from "./Pages/EditCard";
 const Main = () => {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ const Main = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/edit" element={<EditCard />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/client" element={<Client />} />
         <Route path="/sign-up" element={<SignUp />} />
