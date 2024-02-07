@@ -20,7 +20,7 @@ const navigate = useNavigate()
       </div>
       
       {user ?(<div className="user">
-        <p>{user?.displayName}</p>
+        <p>{user?.displayName }</p>
         <img src={user?.photoURL || "https://cdn-icons-png.flaticon.com/512/666/666201.png"} width="30" height="30" />
          <button onClick={signOutUser}>Log Out</button> </div>): null}
       

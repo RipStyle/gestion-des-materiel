@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css"
 import Home from "./Pages/Home";
-import Admin from "./Pages/admin";
-import Client from "./Pages/client";
 import Login from "./Pages/login";
 import Navbar from "./Pages/components/navbar";
 import Create from "./Pages/materiel/create"
@@ -15,9 +13,7 @@ const Main = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/edit" element={<EditCard />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/client" element={<Client />} />
+        <Route path="/edit/:id" element={<EditCard />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/create-materiel" element={<Create />} />

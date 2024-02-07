@@ -2,16 +2,16 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import { auth, db } from "../../config/firebase";
+import {  db } from "../../config/firebase";
 import { addDoc, collection } from "firebase/firestore";
-import { useAuthState } from "react-firebase-hooks/auth";
+
 import { useNavigate } from "react-router-dom";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 const CreateForm = () => {
   const uuid = uuidv4();
 
-  const [user] = useAuthState(auth);
+  
 
   const [image, setImage] = useState("");
 
@@ -38,29 +38,23 @@ const CreateForm = () => {
 
   const navigate = useNavigate();
   const onCreateMat = async (data: createFormData) => {
-
     await addDoc(materielRef, {
       name: data.nom,
       qte: data.qte,
       img: image,
-      id: uuid ,
+      id: uuid,
     });
     alert("materiel has been submitted succesfully");
     navigate("/");
   };
 
- const handleChange = (event) => {
+  const handleChange = (event) => {
     const file = event.target.files[0];
     if (file) {
-      // Use URL.createObjectURL to display a preview of the image
-      console.log(URL.createObjectURL(file))
       setImage(URL.createObjectURL(file));
-      // Update the form value using setValue from react-hook-form
       console.log(image);
     }
-    
   };
-  
 
   return (
     <form onSubmit={handleSubmit(onCreateMat)} className="create-post">

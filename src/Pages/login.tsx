@@ -2,7 +2,7 @@ import { provider, auth } from "../config/firebase";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import SignIn from "./components/signin";
-import SignUp from "./components/signup";
+
 function Login() {
   const navigate = useNavigate()
   const signInWithGoogle = async () => {

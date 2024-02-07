@@ -7,7 +7,7 @@ import {
   deleteDoc,
   doc,
 } from "firebase/firestore";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { db, auth } from "../config/firebase";
 import { Mat } from "./Home";
@@ -23,7 +23,7 @@ const Card = (props: Props) => {
   const materielRef = collection(db, "materiel");
   const [Materiel, setMateriel] = useState<Mat[] | null>();
   const Edit = () => {
-    navigate("/edit?id=" + mat.id);
+    navigate("/edit/" + mat.id);
   };
 
 
@@ -38,7 +38,6 @@ const Card = (props: Props) => {
         setMateriel(
           (prev) => prev && prev.filter((materiel) => materiel.id !== matId)
         );
-        
       }
       
     } catch (err) {
@@ -58,14 +57,14 @@ const Card = (props: Props) => {
       <div className="footer">
         <p>{mat.qte}</p>
       </div>
-      <div className="buttons">
+      {user ? <div className="buttons">
         <button onClick={Edit} className="button editbtn">
           Edit
         </button>
         <button onClick={onDelete} className="button deletebtn">
           Delete
         </button>
-      </div>
+      </div>: ""}
     </div>
   );
 };
